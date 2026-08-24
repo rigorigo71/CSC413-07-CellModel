@@ -1,0 +1,10 @@
+version = 1
+
+# source/test files carry their own SPDX headers. the build scripts, wrapper,
+# properties, README, gitignore are covered here in
+# bulk so they need no header comments.
+[[annotations]]
+path = ["build.gradle", "settings.gradle", "gradle.properties", "gradlew", "gradlew.bat", "gradle/wrapper/**", "README.md", ".gitignore", ".gitattributes", ".devcontainer/**", ".github/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Ivan Corneillet <ivan@paspeur.com>"
+SPDX-License-Identifier = "LicenseRef-paspeur-Classroom"

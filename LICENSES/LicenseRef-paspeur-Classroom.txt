@@ -1,0 +1,75 @@
+LicenseRef-paspeur-Classroom
+
+paspeur Classroom License
+
+Copyright (c) 2026 Ivan Corneillet <ivan@paspeur.com>.
+
+All rights reserved.
+
+This software, source code, documentation, assignments, scaffolding, tests,
+datasets, examples, handouts, lecture slides, presentations, and decks,
+and other accompanying materials (collectively, the "Materials") are
+proprietary works of the copyright holder. No rights are granted except as
+expressly stated below.
+
+1. limited classroom use grant
+
+   A student currently enrolled in a course or program for which the Materials
+   are distributed is granted a non-exclusive, non-transferable, revocable
+   license to download, use, study, compile, execute, and modify the Materials
+   solely to complete that course or program.
+
+2. no redistribution
+
+   You may not publish, post, mirror, share, sublicense, distribute, transfer,
+   or otherwise make the Materials available to any third party, whether
+   publicly or privately.
+
+3. no publication of assignments or solutions
+
+   You may not publish, post, share, distribute, or otherwise make available
+   assignment specifications, starter code, tests, completed assignments,
+   solutions, or derivative works substantially based on the Materials,
+   whether during or after the course.
+
+4. your original work
+
+   You retain copyright in the original code and written work you create to
+   complete the assignments. This license does not transfer your copyright.
+   However, this license does not grant any right to redistribute the Materials
+   or derivative works that incorporate substantial portions of them.
+
+5. discussion of concepts
+
+   This license does not restrict discussion of concepts, algorithms,
+   techniques, or knowledge learned through use of the Materials, provided that
+   the Materials themselves, assignment content, and solutions are not
+   redistributed or published.
+
+6. no commercial use
+
+   The Materials may not be used for commercial purposes without prior written
+   permission from the copyright holder.
+
+7. no warranty
+
+   THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+8. limitation of liability
+
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY ARISING FROM OR RELATED TO THE MATERIALS OR THEIR USE.
+
+9. termination
+
+   This license terminates automatically upon any breach of its terms. Upon
+   termination, all rights granted under this license cease immediately.
+
+10. separate permission
+
+   Additional rights may be granted only through written permission from the
+   copyright holder.
+
+For permissions beyond this license, contact ivan@paspeur.com.

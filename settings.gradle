@@ -1,0 +1,8 @@
+// cell-model — a CSC 413 GatorSheet slice
+plugins {
+	// resolve (and, when the machine has no match, download) the pinned Temurin
+	// JDK 25 toolchain — see build.gradle's java { toolchain }. keep the resolver
+	// version current (1.0.0 as of 2026-09; check the Gradle Plugin Portal).
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+rootProject.name = 'cell-model'

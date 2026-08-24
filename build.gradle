@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+// the course standardizes on the Java 25 LTS. the toolchain selects — or, via
+// the settings.gradle resolver, downloads — Temurin 25 regardless of the
+// machine's default `java`, so the build matches the grader image exactly.
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(25)
+		vendor = JvmVendorSpec.ADOPTIUM
+	}
+}
+
+// records, sealed interfaces, and pattern-matching switch are all final well
+// before 25; pin the bytecode/API level so every machine and CI agree.
+// encoding is pinned for the same reason: javac otherwise reads your source
+// in the platform default charset, so the same committed bytes compile
+// differently on a machine configured for something other than UTF-8.
+tasks.withType(JavaCompile).configureEach {
+	options.release = 25
+	options.encoding = 'UTF-8'
+}
+
+dependencies {
+	testImplementation platform('org.junit:junit-bom:5.11.3')
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+	useJUnitPlatform()
+	// the last two hidden inputs the machine can still smuggle in. text
+	// formatting and case rules follow the JVM's default locale and charset,
+	// so a machine set to fr_FR renders 1.5 as "1,50" and an assertion that
+	// passes for you fails on the grader. Pin both: the result depends on the
+	// repository, not on how the laptop was configured.
+	defaultCharacterEncoding = 'UTF-8'
+	systemProperty 'user.language', 'en'
+	systemProperty 'user.country', 'US'
+	testLogging {
+		events 'passed', 'failed', 'skipped'
+		showStandardStreams = true
+	}
+}

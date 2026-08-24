@@ -1,0 +1,16 @@
+# Line endings are a committed decision, not a property of whoever cloned last.
+# Without this, a checkout on Windows rewrites text files to CRLF, and the same
+# committed bytes then behave differently on your machine and on the grader —
+# a hidden input in the one place you cannot see it, the working tree.
+* text=auto eol=lf
+
+# Never transform these.
+*.jar binary
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# gradlew is executed as a shell script and must stay LF; gradlew.bat is a
+# Windows batch file and is the one thing that wants CRLF.
+gradlew     text eol=lf
+gradlew.bat text eol=crlf

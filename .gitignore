@@ -1,0 +1,9 @@
+# build output — never commit build artifacts (build & repository hygiene is graded)
+.gradle/
+build/
+
+# ide noise — the course is command-line first
+.idea/
+*.iml
+.vscode/
+.DS_Store

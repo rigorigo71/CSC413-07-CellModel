@@ -1,0 +1,28 @@
+// The development container every slice ships.
+//
+// devcontainer.json is an open specification (containers.dev), not one tool's
+// config file: GitHub Codespaces reads it as a service, and the Dev Container
+// CLI reads the same file on any machine that has Docker.
+{
+	"name": "csc-413",
+
+	// Built from the Dockerfile next to this file, which starts FROM the
+	// grader's own image. ivan>thron builds every submission on
+	// eclipse-temurin:25-jdk (see slices/common/grader/Dockerfile), so working
+	// in here is working on the machine that decides: same vendor, same
+	// version, same OS -- parity by construction rather than by everyone
+	// installing carefully and hoping. A slice that needs a tool for working
+	// by hand adds it there; the build and its tests must stand without it.
+	"build": { "dockerfile": "Dockerfile" },
+
+	// The base image is a JDK, not a whole workstation: git is not in it.
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+
+	// Deliberately nothing that sets an environment variable or writes a file
+	// the build could read. A container that quietly supplied something the
+	// build needs would hide exactly the class of bug this course teaches
+	// students to find.
+	"postCreateCommand": "java -version"
+}
